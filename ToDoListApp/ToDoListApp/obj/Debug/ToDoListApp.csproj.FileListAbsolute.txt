@@ -1,0 +1,10 @@
+D:\github repo\ToDoListApp\ToDoListApp\ToDoListApp\obj\Debug\ToDoListApp.csproj.AssemblyReference.cache
+D:\github repo\ToDoListApp\ToDoListApp\ToDoListApp\obj\Debug\ToDoListApp.ToDoListApp.resources
+D:\github repo\ToDoListApp\ToDoListApp\ToDoListApp\obj\Debug\ToDoListApp.Properties.Resources.resources
+D:\github repo\ToDoListApp\ToDoListApp\ToDoListApp\obj\Debug\ToDoListApp.csproj.GenerateResource.cache
+D:\github repo\ToDoListApp\ToDoListApp\ToDoListApp\obj\Debug\ToDoListApp.csproj.CoreCompileInputs.cache
+D:\github repo\ToDoListApp\ToDoListApp\ToDoListApp\bin\Debug\ToDoListApp.exe.config
+D:\github repo\ToDoListApp\ToDoListApp\ToDoListApp\bin\Debug\ToDoListApp.exe
+D:\github repo\ToDoListApp\ToDoListApp\ToDoListApp\bin\Debug\ToDoListApp.pdb
+D:\github repo\ToDoListApp\ToDoListApp\ToDoListApp\obj\Debug\ToDoListApp.exe
+D:\github repo\ToDoListApp\ToDoListApp\ToDoListApp\obj\Debug\ToDoListApp.pdb
