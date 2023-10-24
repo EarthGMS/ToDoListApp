@@ -34,6 +34,7 @@ namespace ToDoListApp
             this.TaskDropdown = new System.Windows.Forms.ComboBox();
             this.ResetTaskButton = new System.Windows.Forms.Button();
             this.TaskCount = new System.Windows.Forms.Label();
+            this.TaskChooseLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // AppLabel
@@ -80,11 +81,22 @@ namespace ToDoListApp
             this.TaskCount.TabIndex = 3;
             this.TaskCount.Text = "TASK COUNT:";
             // 
+            // TaskChooseLabel
+            // 
+            this.TaskChooseLabel.AutoSize = true;
+            this.TaskChooseLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.TaskChooseLabel.Location = new System.Drawing.Point(22, 82);
+            this.TaskChooseLabel.Name = "TaskChooseLabel";
+            this.TaskChooseLabel.Size = new System.Drawing.Size(120, 20);
+            this.TaskChooseLabel.TabIndex = 4;
+            this.TaskChooseLabel.Text = "SELECT TASK:";
+            // 
             // ToDoListApp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.TaskChooseLabel);
             this.Controls.Add(this.TaskCount);
             this.Controls.Add(this.ResetTaskButton);
             this.Controls.Add(this.TaskDropdown);
@@ -105,6 +117,7 @@ namespace ToDoListApp
         private System.Windows.Forms.ComboBox TaskDropdown;
         private System.Windows.Forms.Button ResetTaskButton;
         private System.Windows.Forms.Label TaskCount;
+        private System.Windows.Forms.Label TaskChooseLabel;
     }
 }
 
