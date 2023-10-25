@@ -32,7 +32,7 @@ namespace ToDoListApp
 
         private void TaskDropdown_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            TaskNameInput1.Text = TaskDictionary.Keys.ToString();
         }
     }
 }
