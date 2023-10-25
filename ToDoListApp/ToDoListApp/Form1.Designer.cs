@@ -35,6 +35,15 @@ namespace ToDoListApp
             this.ResetTaskButton = new System.Windows.Forms.Button();
             this.TaskCount = new System.Windows.Forms.Label();
             this.TaskChooseLabel = new System.Windows.Forms.Label();
+            this.TaskNameInput1 = new System.Windows.Forms.TextBox();
+            this.TaskName1 = new System.Windows.Forms.Label();
+            this.TaskDescLabel = new System.Windows.Forms.Label();
+            this.TaskDesc1 = new System.Windows.Forms.TextBox();
+            this.FinishTask = new System.Windows.Forms.Button();
+            this.DeleteTaskButton = new System.Windows.Forms.Button();
+            this.SaveTextButton = new System.Windows.Forms.Button();
+            this.NewTaskButton = new System.Windows.Forms.Button();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // AppLabel
@@ -49,6 +58,14 @@ namespace ToDoListApp
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.NewTaskButton);
+            this.panel1.Controls.Add(this.SaveTextButton);
+            this.panel1.Controls.Add(this.DeleteTaskButton);
+            this.panel1.Controls.Add(this.FinishTask);
+            this.panel1.Controls.Add(this.TaskDesc1);
+            this.panel1.Controls.Add(this.TaskDescLabel);
+            this.panel1.Controls.Add(this.TaskName1);
+            this.panel1.Controls.Add(this.TaskNameInput1);
             this.panel1.Location = new System.Drawing.Point(26, 131);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(736, 294);
@@ -91,6 +108,79 @@ namespace ToDoListApp
             this.TaskChooseLabel.TabIndex = 4;
             this.TaskChooseLabel.Text = "SELECT TASK:";
             // 
+            // TaskNameInput1
+            // 
+            this.TaskNameInput1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.TaskNameInput1.Location = new System.Drawing.Point(141, 21);
+            this.TaskNameInput1.Name = "TaskNameInput1";
+            this.TaskNameInput1.Size = new System.Drawing.Size(263, 26);
+            this.TaskNameInput1.TabIndex = 5;
+            // 
+            // TaskName1
+            // 
+            this.TaskName1.AutoSize = true;
+            this.TaskName1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.TaskName1.Location = new System.Drawing.Point(12, 24);
+            this.TaskName1.Name = "TaskName1";
+            this.TaskName1.Size = new System.Drawing.Size(104, 20);
+            this.TaskName1.TabIndex = 5;
+            this.TaskName1.Text = "TASK NAME:";
+            // 
+            // TaskDescLabel
+            // 
+            this.TaskDescLabel.AutoSize = true;
+            this.TaskDescLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.TaskDescLabel.Location = new System.Drawing.Point(12, 69);
+            this.TaskDescLabel.Name = "TaskDescLabel";
+            this.TaskDescLabel.Size = new System.Drawing.Size(167, 20);
+            this.TaskDescLabel.TabIndex = 6;
+            this.TaskDescLabel.Text = "TASK DESCRIPTION:";
+            // 
+            // TaskDesc1
+            // 
+            this.TaskDesc1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.TaskDesc1.Location = new System.Drawing.Point(16, 101);
+            this.TaskDesc1.Multiline = true;
+            this.TaskDesc1.Name = "TaskDesc1";
+            this.TaskDesc1.Size = new System.Drawing.Size(388, 175);
+            this.TaskDesc1.TabIndex = 7;
+            // 
+            // FinishTask
+            // 
+            this.FinishTask.Location = new System.Drawing.Point(426, 18);
+            this.FinishTask.Name = "FinishTask";
+            this.FinishTask.Size = new System.Drawing.Size(143, 34);
+            this.FinishTask.TabIndex = 5;
+            this.FinishTask.Text = "Finish task";
+            this.FinishTask.UseVisualStyleBackColor = true;
+            // 
+            // DeleteTaskButton
+            // 
+            this.DeleteTaskButton.Location = new System.Drawing.Point(575, 18);
+            this.DeleteTaskButton.Name = "DeleteTaskButton";
+            this.DeleteTaskButton.Size = new System.Drawing.Size(143, 34);
+            this.DeleteTaskButton.TabIndex = 8;
+            this.DeleteTaskButton.Text = "Delete task";
+            this.DeleteTaskButton.UseVisualStyleBackColor = true;
+            // 
+            // SaveTextButton
+            // 
+            this.SaveTextButton.Location = new System.Drawing.Point(502, 122);
+            this.SaveTextButton.Name = "SaveTextButton";
+            this.SaveTextButton.Size = new System.Drawing.Size(143, 34);
+            this.SaveTextButton.TabIndex = 9;
+            this.SaveTextButton.Text = "Save text";
+            this.SaveTextButton.UseVisualStyleBackColor = true;
+            // 
+            // NewTaskButton
+            // 
+            this.NewTaskButton.Location = new System.Drawing.Point(502, 174);
+            this.NewTaskButton.Name = "NewTaskButton";
+            this.NewTaskButton.Size = new System.Drawing.Size(143, 34);
+            this.NewTaskButton.TabIndex = 10;
+            this.NewTaskButton.Text = "New task";
+            this.NewTaskButton.UseVisualStyleBackColor = true;
+            // 
             // ToDoListApp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -105,6 +195,8 @@ namespace ToDoListApp
             this.Name = "ToDoListApp";
             this.Text = "To-do List";
             this.Load += new System.EventHandler(this.ToDoListApp_Load);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -118,6 +210,14 @@ namespace ToDoListApp
         private System.Windows.Forms.Button ResetTaskButton;
         private System.Windows.Forms.Label TaskCount;
         private System.Windows.Forms.Label TaskChooseLabel;
+        private System.Windows.Forms.Label TaskName1;
+        private System.Windows.Forms.TextBox TaskNameInput1;
+        private System.Windows.Forms.Label TaskDescLabel;
+        private System.Windows.Forms.TextBox TaskDesc1;
+        private System.Windows.Forms.Button FinishTask;
+        private System.Windows.Forms.Button DeleteTaskButton;
+        private System.Windows.Forms.Button SaveTextButton;
+        private System.Windows.Forms.Button NewTaskButton;
     }
 }
 

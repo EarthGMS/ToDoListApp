@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace ToDoListApp
 {
-    public partial class ToDoListApp : Form
+    public partial class NewTask : Form
     {
-        public ToDoListApp()
+        public NewTask()
         {
             InitializeComponent();
-        }
-
-        private void ToDoListApp_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }
