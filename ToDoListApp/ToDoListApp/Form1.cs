@@ -12,14 +12,21 @@ namespace ToDoListApp
 {
     public partial class ToDoListApp : Form
     {
+        Dictionary<string, string> TaskDictionary;
         public ToDoListApp()
         {
             InitializeComponent();
+            TaskDictionary = new Dictionary<string, string>();
         }
 
         private void ToDoListApp_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void SaveTextButton_Click(object sender, EventArgs e)
+        {
+            TaskDictionary.Add(TaskNameInput1.Text, TaskDesc1.Text);
         }
     }
 }

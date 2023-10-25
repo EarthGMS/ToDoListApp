@@ -171,6 +171,7 @@ namespace ToDoListApp
             this.SaveTextButton.TabIndex = 9;
             this.SaveTextButton.Text = "Save text";
             this.SaveTextButton.UseVisualStyleBackColor = true;
+            this.SaveTextButton.Click += new System.EventHandler(this.SaveTextButton_Click);
             // 
             // NewTaskButton
             // 
