@@ -78,6 +78,7 @@ namespace ToDoListApp
             this.TaskDropdown.Name = "TaskDropdown";
             this.TaskDropdown.Size = new System.Drawing.Size(150, 21);
             this.TaskDropdown.TabIndex = 0;
+            this.TaskDropdown.SelectedIndexChanged += new System.EventHandler(this.TaskDropdown_SelectedIndexChanged);
             // 
             // ResetTaskButton
             // 

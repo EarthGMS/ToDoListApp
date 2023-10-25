@@ -27,6 +27,12 @@ namespace ToDoListApp
         private void SaveTextButton_Click(object sender, EventArgs e)
         {
             TaskDictionary.Add(TaskNameInput1.Text, TaskDesc1.Text);
+            TaskDropdown.Items.AddRange(TaskDictionary.Keys.ToArray());
+        }
+
+        private void TaskDropdown_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
