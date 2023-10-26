@@ -12,11 +12,13 @@ namespace ToDoListApp
 {
     public partial class ToDoListApp : Form
     {
-        Dictionary<string, string> TaskDictionary;
+        public List<string> TaskNameList;
+        public List<string> TaskDescList;
         public ToDoListApp()
         {
             InitializeComponent();
-            TaskDictionary = new Dictionary<string, string>();
+            TaskNameList = new List<string>();
+            TaskDescList = new List<string>();
         }
 
         private void ToDoListApp_Load(object sender, EventArgs e)
@@ -26,13 +28,15 @@ namespace ToDoListApp
 
         private void SaveTextButton_Click(object sender, EventArgs e)
         {
-            TaskDictionary.Add(TaskNameInput1.Text, TaskDesc1.Text);
-            TaskDropdown.Items.AddRange(TaskDictionary.Keys.ToArray());
+            TaskNameList.Add(TaskNameInput1.Text);
+            TaskDescList.Add(TaskDesc1.Text);
+            TaskDropdown.Items.AddRange(TaskNameList.ToArray());
         }
 
         private void TaskDropdown_SelectedIndexChanged(object sender, EventArgs e)
         {
-            TaskNameInput1.Text = TaskDictionary.Keys.ToString();
+            TaskNameInput1.Text = TaskNameList[TaskDropdown.SelectedIndex];
+            TaskDesc1.Text = TaskDescList[TaskDropdown.SelectedIndex];
         }
     }
 }

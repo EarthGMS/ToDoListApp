@@ -16,5 +16,12 @@ namespace ToDoListApp
         {
             InitializeComponent();
         }
+
+        private void SaveButton_Click(object sender, EventArgs e)
+        {
+            TaskNameList.Add(TaskNameInput1.Text);
+            TaskDescList.Add(TaskDesc1.Text);
+            TaskDropdown.Items.AddRange(TaskNameList.ToArray());
+        }
     }
 }

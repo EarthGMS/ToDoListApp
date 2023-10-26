@@ -94,6 +94,7 @@ namespace ToDoListApp
             this.SaveButton.TabIndex = 5;
             this.SaveButton.Text = "SAVE";
             this.SaveButton.UseVisualStyleBackColor = true;
+            this.SaveButton.Click += new System.EventHandler(this.SaveButton_Click);
             // 
             // CancelButton
             // 
