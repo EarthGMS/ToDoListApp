@@ -12,16 +12,18 @@ namespace ToDoListApp
 {
     public partial class NewTask : Form
     {
+        public ToDoListApp MainPage;
         public NewTask()
         {
             InitializeComponent();
+            MainPage = new ToDoListApp();
         }
 
         private void SaveButton_Click(object sender, EventArgs e)
         {
-            TaskNameList.Add(TaskNameInput1.Text);
-            TaskDescList.Add(TaskDesc1.Text);
-            TaskDropdown.Items.AddRange(TaskNameList.ToArray());
+            MainPage.TaskNameList.Add(MainPage.TaskNameInput1.Text);
+            MainPage.TaskDescList.Add(MainPage.TaskDesc1.Text);
+            MainPage.TaskDropdown.Items.AddRange(MainPage.TaskNameList.ToArray());
         }
     }
 }

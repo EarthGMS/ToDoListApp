@@ -14,9 +14,12 @@ namespace ToDoListApp
     {
         public List<string> TaskNameList;
         public List<string> TaskDescList;
+
+        public NewTask NewTaskPage;
         public ToDoListApp()
         {
             InitializeComponent();
+            NewTaskPage = new NewTask();
             TaskNameList = new List<string>();
             TaskDescList = new List<string>();
         }
@@ -37,6 +40,11 @@ namespace ToDoListApp
         {
             TaskNameInput1.Text = TaskNameList[TaskDropdown.SelectedIndex];
             TaskDesc1.Text = TaskDescList[TaskDropdown.SelectedIndex];
+        }
+
+        private void NewTaskButton_Click(object sender, EventArgs e)
+        {
+            NewTaskPage.Show();
         }
     }
 }

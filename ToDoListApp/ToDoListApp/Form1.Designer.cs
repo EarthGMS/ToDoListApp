@@ -79,6 +79,7 @@ namespace ToDoListApp
             this.NewTaskButton.TabIndex = 10;
             this.NewTaskButton.Text = "New task";
             this.NewTaskButton.UseVisualStyleBackColor = true;
+            this.NewTaskButton.Click += new System.EventHandler(this.NewTaskButton_Click);
             // 
             // SaveTextButton
             // 
@@ -208,7 +209,6 @@ namespace ToDoListApp
 
         private System.Windows.Forms.Label AppLabel;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.ComboBox TaskDropdown;
         private System.Windows.Forms.Button ResetTaskButton;
         private System.Windows.Forms.Label TaskCount;
         private System.Windows.Forms.Label TaskChooseLabel;
@@ -220,6 +220,7 @@ namespace ToDoListApp
         private System.Windows.Forms.Button NewTaskButton;
         public System.Windows.Forms.TextBox TaskNameInput1;
         public System.Windows.Forms.TextBox TaskDesc1;
+        public System.Windows.Forms.ComboBox TaskDropdown;
     }
 }
 
