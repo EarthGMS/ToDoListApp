@@ -21,9 +21,9 @@ namespace ToDoListApp
 
         private void SaveButton_Click(object sender, EventArgs e)
         {
-            MainPage.TaskNameList.Add(MainPage.TaskNameInput1.Text);
-            MainPage.TaskDescList.Add(MainPage.TaskDesc1.Text);
-            MainPage.TaskDropdown.Items.AddRange(MainPage.TaskNameList.ToArray());
+            //MainPage.TaskNameList.Add(MainPage.TaskNameInput1.Text);
+            //MainPage.TaskDescList.Add(MainPage.TaskDesc1.Text);
+            //MainPage.TaskDropdown.Items.AddRange(MainPage.TaskNameList.ToArray());
         }
     }
 }
