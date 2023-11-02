@@ -99,6 +99,7 @@ namespace ToDoListApp
             this.DeleteTaskButton.TabIndex = 8;
             this.DeleteTaskButton.Text = "Delete task";
             this.DeleteTaskButton.UseVisualStyleBackColor = true;
+            this.DeleteTaskButton.Click += new System.EventHandler(this.DeleteTaskButton_Click);
             // 
             // FinishTask
             // 
@@ -115,6 +116,7 @@ namespace ToDoListApp
             this.TaskDesc1.Location = new System.Drawing.Point(16, 101);
             this.TaskDesc1.Multiline = true;
             this.TaskDesc1.Name = "TaskDesc1";
+            this.TaskDesc1.ReadOnly = true;
             this.TaskDesc1.Size = new System.Drawing.Size(388, 175);
             this.TaskDesc1.TabIndex = 7;
             // 
@@ -143,6 +145,7 @@ namespace ToDoListApp
             this.TaskNameInput1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.TaskNameInput1.Location = new System.Drawing.Point(141, 21);
             this.TaskNameInput1.Name = "TaskNameInput1";
+            this.TaskNameInput1.ReadOnly = true;
             this.TaskNameInput1.Size = new System.Drawing.Size(263, 26);
             this.TaskNameInput1.TabIndex = 5;
             // 

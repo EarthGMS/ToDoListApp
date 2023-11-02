@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace ToDoListApp
 {
@@ -21,9 +22,16 @@ namespace ToDoListApp
 
         private void SaveButton_Click(object sender, EventArgs e)
         {
-            //MainPage.TaskNameList.Add(MainPage.TaskNameInput1.Text);
-            //MainPage.TaskDescList.Add(MainPage.TaskDesc1.Text);
-            //MainPage.TaskDropdown.Items.AddRange(MainPage.TaskNameList.ToArray());
+            using (StreamWriter NameList = new StreamWriter("D:/github repo/ToDoListApp/ToDoListApp/ToDoListApp/ToDoNameList.txt"))
+            {
+                NameList.WriteLine(TaskNameInput.Text);
+            }
+            using (StreamWriter DescList = new StreamWriter("D:/github repo/ToDoListApp/ToDoListApp/ToDoListApp/ToDoDescList.txt"))
+            {
+                DescList.WriteLine(TaskDescInput.Text);
+            }
+            MainPage.Show();
+            Close();
         }
     }
 }

@@ -21,16 +21,11 @@ namespace ToDoListApp
         {
             InitializeComponent();
             TaskNameList = new List<string>();
-            using (StreamReader reader = new StreamReader("D:/github repo/ToDoListApp/ToDoListApp/ToDoListApp/ToDoNameList.txt"))
-            {
-                string line;
-                while ((line = reader.ReadLine()) != null)
-                {
-                    TaskNameList.Add(line);
-                }
-            }
             TaskDescList = new List<string>();
-            TaskNameInput1.Text = TaskNameList[1];
+            
+            TaskNameList = File.ReadAllLines("D:/github repo/ToDoListApp/ToDoListApp/ToDoListApp/ToDoNameList.txt").ToList();
+            TaskDropdown.Items.AddRange(TaskNameList.ToArray());
+            TaskDescList = File.ReadAllLines("D:/github repo/ToDoListApp/ToDoListApp/ToDoListApp/ToDoDescList.txt").ToList();
         }
 
         private void ToDoListApp_Load(object sender, EventArgs e)
@@ -40,12 +35,6 @@ namespace ToDoListApp
 
         private void SaveTextButton_Click(object sender, EventArgs e)
         {
-            StreamWriter NameList = new StreamWriter("D:/github repo/ToDoListApp/ToDoListApp/ToDoListApp/ToDoNameList.txt");
-            foreach(string item in TaskNameList)
-            {
-                NameList.WriteLine(item);
-            }
-            NameList.Close();
             if (TaskNameInput1.Text == "" || TaskDesc1.Text == "")
             {
                 MessageBox.Show("Please put text in both boxes");
@@ -69,6 +58,27 @@ namespace ToDoListApp
         {
             NewTaskPage = new NewTask();
             NewTaskPage.Show();
+        }
+
+        private void DeleteTaskButton_Click(object sender, EventArgs e)
+        {
+
+            //ON PROGRESS, CAN CAUSE ERROR
+            using (StreamReader NameListRead = new StreamReader("D:/github repo/ToDoListApp/ToDoListApp/ToDoListApp/ToDoNameList.txt"))
+            {
+                using (StreamWriter NameList = new StreamWriter("D:/github repo/ToDoListApp/ToDoListApp/ToDoListApp/ToDoNameList.txt"))
+                {
+                    string line;
+                    string lineFill = null;
+                    while ((line = NameListRead.ReadLine()) != null)
+                    {
+                        if (String.Compare(line, TaskNameList[TaskDropdown.SelectedIndex]) == 0)
+                        {
+                            NameList.WriteLine(lineFill);
+                        }
+                    }
+                }
+            }
         }
     }
 }
