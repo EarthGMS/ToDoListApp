@@ -60,9 +60,8 @@ namespace ToDoListApp
             NewTaskPage.Show();
         }
 
-        private void DeleteTaskButton_Click(object sender, EventArgs e)
+        private void FinishTask_Click(object sender, EventArgs e)
         {
-
             //ON PROGRESS, CAN CAUSE ERROR
             using (StreamReader NameListRead = new StreamReader("D:/github repo/ToDoListApp/ToDoListApp/ToDoListApp/ToDoNameList.txt"))
             {

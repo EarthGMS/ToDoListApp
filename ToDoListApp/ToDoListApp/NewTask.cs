@@ -13,6 +13,8 @@ namespace ToDoListApp
 {
     public partial class NewTask : Form
     {
+        string nameText = null;
+        string DescText = null;
         public ToDoListApp MainPage;
         public NewTask()
         {
@@ -22,13 +24,25 @@ namespace ToDoListApp
 
         private void SaveButton_Click(object sender, EventArgs e)
         {
-            using (StreamWriter NameList = new StreamWriter("D:/github repo/ToDoListApp/ToDoListApp/ToDoListApp/ToDoNameList.txt"))
+            using (StreamReader NameList = new StreamReader("D:/github repo/ToDoListApp/ToDoListApp/ToDoListApp/ToDoNameList.txt"))
             {
-                NameList.WriteLine(TaskNameInput.Text);
+                nameText = NameList.ReadToEnd();
+                NameList.Close();
             }
-            using (StreamWriter DescList = new StreamWriter("D:/github repo/ToDoListApp/ToDoListApp/ToDoListApp/ToDoDescList.txt"))
+            using (StreamWriter Name = new StreamWriter("D:/github repo/ToDoListApp/ToDoListApp/ToDoListApp/ToDoNameList.txt"))
             {
-                DescList.WriteLine(TaskDescInput.Text);
+                Name.Write(nameText);
+                Name.Write("\n" + TaskNameInput.Text);
+            }
+            using (StreamReader DescList = new StreamReader("D:/github repo/ToDoListApp/ToDoListApp/ToDoListApp/ToDoDescList.txt"))
+            {
+                DescText = DescList.ReadToEnd();
+                DescList.Close();
+            }
+            using (StreamWriter Desc = new StreamWriter("D:/github repo/ToDoListApp/ToDoListApp/ToDoListApp/ToDoDescList.txt"))
+            {
+                Desc.Write(DescText);
+                Desc.Write("\n"+TaskDescInput.Text);
             }
             MainPage.Show();
             Close();
