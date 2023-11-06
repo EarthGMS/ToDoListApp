@@ -31,8 +31,15 @@ namespace ToDoListApp
             }
             using (StreamWriter Name = new StreamWriter("D:/github repo/ToDoListApp/ToDoListApp/ToDoListApp/ToDoNameList.txt"))
             {
-                Name.Write(nameText);
-                Name.Write("\n" + TaskNameInput.Text);
+                if (nameText == "")
+                {
+                    Name.Write(TaskNameInput.Text);
+                }
+                else
+                {
+                    Name.Write(nameText + "\n");
+                    Name.Write(TaskNameInput.Text);
+                }    
             }
             using (StreamReader DescList = new StreamReader("D:/github repo/ToDoListApp/ToDoListApp/ToDoListApp/ToDoDescList.txt"))
             {
@@ -41,8 +48,15 @@ namespace ToDoListApp
             }
             using (StreamWriter Desc = new StreamWriter("D:/github repo/ToDoListApp/ToDoListApp/ToDoListApp/ToDoDescList.txt"))
             {
-                Desc.Write(DescText);
-                Desc.Write("\n"+TaskDescInput.Text);
+                if (nameText == "")
+                {
+                    Desc.Write(TaskDescInput.Text);
+                }
+                else
+                {
+                    Desc.Write(DescText + "\n");
+                    Desc.Write(TaskDescInput.Text);
+                }
             }
             MainPage.Show();
             Close();
