@@ -16,12 +16,24 @@ namespace ToDoListApp
         public List<string> TaskNameList;
         public List<string> TaskDescList;
 
+        List<string> TaskNameLine;
+        List<string> TaskDescLine;
+
         public NewTask NewTaskPage;
         public ToDoListApp()
         {
             InitializeComponent();
             TaskNameList = new List<string>();
             TaskDescList = new List<string>();
+
+            TaskNameLine = new List<string>();
+            TaskDescLine = new List<string>();
+
+            using (StreamReader NameList = new StreamReader("D:/github repo/ToDoListApp/ToDoListApp/ToDoListApp/ToDoNameList.txt"))
+            {
+                TaskNameLine.Add(NameList.ReadLine());
+                NameList.Close();
+            }
             
             TaskNameList = File.ReadAllLines("D:/github repo/ToDoListApp/ToDoListApp/ToDoListApp/ToDoNameList.txt").ToList();
             TaskDropdown.Items.AddRange(TaskNameList.ToArray());
@@ -62,22 +74,17 @@ namespace ToDoListApp
 
         private void FinishTask_Click(object sender, EventArgs e)
         {
-            //ON PROGRESS, CAN CAUSE ERROR
-            using (StreamReader NameListRead = new StreamReader("D:/github repo/ToDoListApp/ToDoListApp/ToDoListApp/ToDoNameList.txt"))
-            {
-                using (StreamWriter NameList = new StreamWriter("D:/github repo/ToDoListApp/ToDoListApp/ToDoListApp/ToDoNameList.txt"))
-                {
-                    string line;
-                    string lineFill = null;
-                    while ((line = NameListRead.ReadLine()) != null)
-                    {
-                        if (String.Compare(line, TaskNameList[TaskDropdown.SelectedIndex]) == 0)
-                        {
-                            NameList.WriteLine(lineFill);
-                        }
-                    }
-                }
-            }
+            int LineToRemove = TaskDropdown.SelectedIndex;
+            TaskNameLine.RemoveAt(LineToRemove);
+            
+            //In progress
+            //using (StreamWriter Name = new StreamWriter("D:/github repo/ToDoListApp/ToDoListApp/ToDoListApp/ToDoNameList.txt"))
+            //{
+            //    for (int i = 1; i <= TaskNameLine.Count; i++)
+            //    {
+            //        Name.Write(TaskNameLine[i]);
+            //    }
+            //}
         }
     }
 }
