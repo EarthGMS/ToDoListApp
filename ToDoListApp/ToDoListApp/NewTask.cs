@@ -24,6 +24,11 @@ namespace ToDoListApp
 
         private void SaveButton_Click(object sender, EventArgs e)
         {
+            if (TaskNameInput.Text == "" || TaskDescInput.Text == "")
+            {
+                MessageBox.Show("Please put information in both boxes");
+                return;
+            }
             using (StreamReader NameList = new StreamReader("D:/github repo/ToDoListApp/ToDoListApp/ToDoListApp/ToDoNameList.txt"))
             {
                 nameText = NameList.ReadToEnd();

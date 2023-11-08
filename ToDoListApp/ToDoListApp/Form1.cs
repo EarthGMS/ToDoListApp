@@ -34,7 +34,6 @@ namespace ToDoListApp
                 TaskNameLine.Add(NameList.ReadLine());
                 NameList.Close();
             }
-            
             TaskNameList = File.ReadAllLines("D:/github repo/ToDoListApp/ToDoListApp/ToDoListApp/ToDoNameList.txt").ToList();
             TaskDropdown.Items.AddRange(TaskNameList.ToArray());
             TaskDescList = File.ReadAllLines("D:/github repo/ToDoListApp/ToDoListApp/ToDoListApp/ToDoDescList.txt").ToList();
@@ -75,16 +74,24 @@ namespace ToDoListApp
         private void FinishTask_Click(object sender, EventArgs e)
         {
             int LineToRemove = TaskDropdown.SelectedIndex;
-            TaskNameLine.RemoveAt(LineToRemove);
+            TaskNameList.RemoveAt(LineToRemove);
+            TaskDescList.RemoveAt(LineToRemove);
             
-            //In progress
-            //using (StreamWriter Name = new StreamWriter("D:/github repo/ToDoListApp/ToDoListApp/ToDoListApp/ToDoNameList.txt"))
-            //{
-            //    for (int i = 1; i <= TaskNameLine.Count; i++)
-            //    {
-            //        Name.Write(TaskNameLine[i]);
-            //    }
-            //}
+            using (StreamWriter Name = new StreamWriter("D:/github repo/ToDoListApp/ToDoListApp/ToDoListApp/ToDoNameList.txt"))
+            {
+               for (int i = 0; i <= TaskNameList.Count - 1; i++)
+                {
+                    Name.Write(TaskNameList[i] + "\n");
+                }
+            }
+
+            using (StreamWriter Desc = new StreamWriter("D:/github repo/ToDoListApp/ToDoListApp/ToDoListApp/ToDoDescList.txt"))
+            {
+                for (int i = 0; i <= TaskDescList.Count - 1; i++)
+                {
+                    Desc.Write(TaskDescList[i] + "\n");
+                }
+            }
         }
     }
 }
