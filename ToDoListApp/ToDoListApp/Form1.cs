@@ -17,7 +17,6 @@ namespace ToDoListApp
         public List<string> TaskDescList;
 
         List<string> TaskNameLine;
-        List<string> TaskDescLine;
 
         public NewTask NewTaskPage;
         public ToDoListApp()
@@ -27,7 +26,7 @@ namespace ToDoListApp
             TaskDescList = new List<string>();
 
             TaskNameLine = new List<string>();
-            TaskDescLine = new List<string>();
+ 
 
             using (StreamReader NameList = new StreamReader("D:/github repo/ToDoListApp/ToDoListApp/ToDoListApp/ToDoNameList.txt"))
             {

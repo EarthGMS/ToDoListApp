@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
+  <asmv1:assemblyIdentity name="ToDoListApp.exe" version="1.0.0.0" publicKeyToken="dee3d92d7686a1fa" language="neutral" processorArchitecture="msil" type="win32" />
+  <application />
+  <entryPoint>
+    <assemblyIdentity name="ToDoListApp" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+    <commandLine file="ToDoListApp.exe" parameters="" />
+  </entryPoint>
+  <trustInfo>
+    <security>
+      <applicationRequestMinimum>
+        <PermissionSet version="1" class="System.Security.NamedPermissionSet" Name="LocalIntranet" Description="Default rights given to applications on the local intranet" Unrestricted="true" ID="Custom" SameSite="site" />
+        <defaultAssemblyRequest permissionSetReference="Custom" />
+      </applicationRequestMinimum>
+      <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
+        <!-- UAC Manifest Options
+             If you want to change the Windows User Account Control level replace the 
+             requestedExecutionLevel node with one of the following.
+
+        <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
+        <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
+        <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
+
+            Specifying requestedExecutionLevel element will disable file and registry virtualization. 
+            Remove this element if your application requires this virtualization for backwards
+            compatibility.
+        -->
+        <requestedExecutionLevel level="asInvoker" uiAccess="false" />
+      </requestedPrivileges>
+    </security>
+  </trustInfo>
+  <dependency>
+    <dependentOS>
+      <osVersionInfo>
+        <os majorVersion="5" minorVersion="1" buildNumber="2600" servicePackMajor="0" />
+      </osVersionInfo>
+    </dependentOS>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Windows.CommonLanguageRuntime" version="4.0.30319.0" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ToDoListApp.exe" size="16344">
+      <assemblyIdentity name="ToDoListApp" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>p9WSwO0kB8X7l/jgRYl34m6LWjLnh0K+brIa/39GeUM=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <file name="ToDoDescList.txt" size="12">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>Y/ZoqOAtQvvPMcXiII9yvzf42HShDdDFK1Q7Xh2E+zo=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="ToDoListApp.exe.config" size="189">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>R+Wg8QGvQVHX8T0ta/qbhH1bXkqY0fRnS3wBV3J0bN8=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="ToDoNameList.txt" size="9">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>FA3h0AdY0QHqIqWO5+2ctQyE6TCpqN/zZl3dbJfO5gM=</dsig:DigestValue>
+    </hash>
+  </file>
+  <compatibility xmlns="urn:schemas-microsoft-com:compatibility.v1">
+    <application>
+      <!-- A list of the Windows versions that this application has been tested on
+           and is designed to work with. Uncomment the appropriate elements
+           and Windows will automatically select the most compatible environment. -->
+      <!-- Windows Vista -->
+      <!--<supportedOS Id="{e2011457-1546-43c5-a5fe-008deee3d3f0}" />-->
+      <!-- Windows 7 -->
+      <!--<supportedOS Id="{35138b9a-5d96-4fbd-8e2d-a2440225f93a}" />-->
+      <!-- Windows 8 -->
+      <!--<supportedOS Id="{4a2f28e3-53b9-4441-ba9c-d69d4a4a6e38}" />-->
+      <!-- Windows 8.1 -->
+      <!--<supportedOS Id="{1f676c76-80e1-4239-95bb-83d0f6d0da78}" />-->
+      <!-- Windows 10 -->
+      <!--<supportedOS Id="{8e0f7a12-bfb3-4fe8-b9a5-48fd50a15a9a}" />-->
+    </application>
+  </compatibility>
+<publisherIdentity name="CN=DESKTOP-SAUCBHT\User" issuerKeyHash="71d02c6cbe4998c9bee704c36c0f1c41dd26737b" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>1wfDMJTNUgdde9OfT6GqHsSjacwy1d/JtAc4o+SxFW4=</DigestValue></Reference></SignedInfo><SignatureValue>AfGQHkFNGfkq/oBwKfk7qSBZSmKStZVqwH03iUExPa66ZMTFcf4zJCrdLPKBGJfytEaSjUDc3hVikaxmnKy5rmyxXvu+Pa3hlo0THEGBveK++bW/PgSIF0sqgjiem26T2Gu3Lugk9/q5MCi7vYTArFr+mG1MkkpIVI7mDbnVqQc=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>u3TXWbvugLJE2EKyD2hXMF8E6XAjrfQVve0FDKTRAcPmUaWasWtpjmN9QktTYmPIsU8Jw6axAVCGNgpJY9xrXfpDY5jD+QKA6PyXU8DgQQXww0rcAgkx2eI2rr1+3VxA0qcOXZRnXIPh4fepmICG65Mk7TAt3BmcvWEXSBvdmDE=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="6e15b1e4a33807b4c9dfd532cc69a3c41eaaa14f9fd37b5d0752cd9430c307d7" Description="" Url=""><as:assemblyIdentity name="ToDoListApp.exe" version="1.0.0.0" publicKeyToken="dee3d92d7686a1fa" language="neutral" processorArchitecture="msil" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=DESKTOP-SAUCBHT\User</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>3WPphmvGaQIj5A8ZY0zWjhKrCr0jwVULwsQV1QJFh2U=</DigestValue></Reference></SignedInfo><SignatureValue>QIjLQ9as0I24m1LGFOE+fqI+y0CzR3f5zmfKY4SWlK3kYvTHPC2oEope0uumaDcdFvT4yJbAgpVnrL2UGfOaDKypyVWRCHkMr0PcOT0S5uXO6fP8nFHrZ6hDrOvnrhIWJYIPNF+/RSba6UeU8fKE9W0GD7gm+Kg/5MmNn/LBGNM=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>u3TXWbvugLJE2EKyD2hXMF8E6XAjrfQVve0FDKTRAcPmUaWasWtpjmN9QktTYmPIsU8Jw6axAVCGNgpJY9xrXfpDY5jD+QKA6PyXU8DgQQXww0rcAgkx2eI2rr1+3VxA0qcOXZRnXIPh4fepmICG65Mk7TAt3BmcvWEXSBvdmDE=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIB6TCCAVKgAwIBAgIQH2RX1C9fq6pKMSlD0KCrHjANBgkqhkiG9w0BAQsFADAzMTEwLwYDVQQDHigARABFAFMASwBUAE8AUAAtAFMAQQBVAEMAQgBIAFQAXABVAHMAZQByMB4XDTIzMTExMTEzNDU0MVoXDTI0MTExMDE5NDU0MVowMzExMC8GA1UEAx4oAEQARQBTAEsAVABPAFAALQBTAEEAVQBDAEIASABUAFwAVQBzAGUAcjCBnzANBgkqhkiG9w0BAQEFAAOBjQAwgYkCgYEAu3TXWbvugLJE2EKyD2hXMF8E6XAjrfQVve0FDKTRAcPmUaWasWtpjmN9QktTYmPIsU8Jw6axAVCGNgpJY9xrXfpDY5jD+QKA6PyXU8DgQQXww0rcAgkx2eI2rr1+3VxA0qcOXZRnXIPh4fepmICG65Mk7TAt3BmcvWEXSBvdmDECAwEAATANBgkqhkiG9w0BAQsFAAOBgQCsV+9mQbspJetildrVMI//EfUqzVbFYxNUG1fP2dC8RhNlO39DVkPHLK+rwORfw6uNp4V5GGVL/R/NBdDm3wTBwj5PtG9cB06RZb3x9Eq7Nc1WTVO/KqTbTNQXNYGA0BY8qcTyeaSMUvZvncFCMUv6iy2EJtQ05CXafRWTgAX8RA==</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>

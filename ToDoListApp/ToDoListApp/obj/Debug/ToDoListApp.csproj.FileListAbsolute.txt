@@ -9,3 +9,8 @@ D:\github repo\ToDoListApp\ToDoListApp\ToDoListApp\bin\Debug\ToDoListApp.pdb
 D:\github repo\ToDoListApp\ToDoListApp\ToDoListApp\obj\Debug\ToDoListApp.exe
 D:\github repo\ToDoListApp\ToDoListApp\ToDoListApp\obj\Debug\ToDoListApp.pdb
 D:\github repo\ToDoListApp\ToDoListApp\ToDoListApp\obj\Debug\ToDoListApp.NewTask.resources
+D:\github repo\ToDoListApp\ToDoListApp\ToDoListApp\bin\Debug\ToDoListApp.exe.manifest
+D:\github repo\ToDoListApp\ToDoListApp\ToDoListApp\bin\Debug\ToDoListApp.application
+D:\github repo\ToDoListApp\ToDoListApp\ToDoListApp\obj\Debug\ToDoListApp.TrustInfo.xml
+D:\github repo\ToDoListApp\ToDoListApp\ToDoListApp\obj\Debug\ToDoListApp.exe.manifest
+D:\github repo\ToDoListApp\ToDoListApp\ToDoListApp\obj\Debug\ToDoListApp.application

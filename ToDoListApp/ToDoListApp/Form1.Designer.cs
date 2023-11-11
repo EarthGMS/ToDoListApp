@@ -46,10 +46,10 @@ namespace ToDoListApp
             // AppLabel
             // 
             this.AppLabel.AutoSize = true;
-            this.AppLabel.Font = new System.Drawing.Font("Candara", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AppLabel.Location = new System.Drawing.Point(276, 9);
+            this.AppLabel.Font = new System.Drawing.Font("Candara", 36F, System.Drawing.FontStyle.Bold);
+            this.AppLabel.Location = new System.Drawing.Point(226, 25);
             this.AppLabel.Name = "AppLabel";
-            this.AppLabel.Size = new System.Drawing.Size(236, 39);
+            this.AppLabel.Size = new System.Drawing.Size(349, 59);
             this.AppLabel.TabIndex = 0;
             this.AppLabel.Text = "TO-DO LIST APP";
             // 
@@ -95,7 +95,7 @@ namespace ToDoListApp
             // 
             this.FinishTask.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.FinishTask.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FinishTask.Location = new System.Drawing.Point(502, 19);
+            this.FinishTask.Location = new System.Drawing.Point(502, 81);
             this.FinishTask.Name = "FinishTask";
             this.FinishTask.Size = new System.Drawing.Size(143, 34);
             this.FinishTask.TabIndex = 5;
@@ -146,7 +146,7 @@ namespace ToDoListApp
             // 
             this.TaskDropdown.Font = new System.Drawing.Font("Candara", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TaskDropdown.FormattingEnabled = true;
-            this.TaskDropdown.Location = new System.Drawing.Point(167, 79);
+            this.TaskDropdown.Location = new System.Drawing.Point(167, 102);
             this.TaskDropdown.Name = "TaskDropdown";
             this.TaskDropdown.Size = new System.Drawing.Size(150, 31);
             this.TaskDropdown.TabIndex = 0;
@@ -156,7 +156,7 @@ namespace ToDoListApp
             // 
             this.TaskChooseLabel.AutoSize = true;
             this.TaskChooseLabel.Font = new System.Drawing.Font("Candara", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TaskChooseLabel.Location = new System.Drawing.Point(22, 82);
+            this.TaskChooseLabel.Location = new System.Drawing.Point(29, 105);
             this.TaskChooseLabel.Name = "TaskChooseLabel";
             this.TaskChooseLabel.Size = new System.Drawing.Size(122, 23);
             this.TaskChooseLabel.TabIndex = 4;
